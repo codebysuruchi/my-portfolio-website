@@ -8,28 +8,28 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 15% 15%;
+    --background: 350 100% 97%;
+    --foreground: 340 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card: 350 50% 98%;
+    --card-foreground: 340 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover: 350 50% 98%;
+    --popover-foreground: 340 15% 15%;
 
-    --primary: 210 85% 40%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 210 85% 65%;
+    --primary: 330 85% 60%;
+    --primary-foreground: 350 50% 98%;
+    --primary-glow: 330 85% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 220 15% 15%;
+    --secondary: 340 40% 96%;
+    --secondary-foreground: 340 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 340 40% 96%;
+    --muted-foreground: 340 16% 47%;
 
-    --accent: 185 85% 45%;
-    --accent-foreground: 210 40% 98%;
-    --accent-glow: 185 85% 70%;
+    --accent: 320 85% 65%;
+    --accent-foreground: 350 50% 98%;
+    --accent-glow: 320 85% 80%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -39,9 +39,9 @@ All colors MUST be HSL.
     --ring: 210 85% 40%;
 
     /* Portfolio-specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(210, 85%, 40%), hsl(185, 85%, 45%));
-    --card-gradient: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(210, 40%, 98%));
-    --accent-gradient: linear-gradient(135deg, hsl(185, 85%, 45%), hsl(210, 85%, 40%));
+    --hero-gradient: linear-gradient(135deg, hsl(330, 85%, 60%), hsl(320, 85%, 65%));
+    --card-gradient: linear-gradient(145deg, hsl(350, 50%, 98%), hsl(340, 40%, 96%));
+    --accent-gradient: linear-gradient(135deg, hsl(320, 85%, 65%), hsl(330, 85%, 60%));
     
     --shadow-soft: 0 4px 6px -1px hsl(220, 15%, 15%, 0.1), 0 2px 4px -1px hsl(220, 15%, 15%, 0.06);
     --shadow-medium: 0 10px 15px -3px hsl(220, 15%, 15%, 0.1), 0 4px 6px -2px hsl(220, 15%, 15%, 0.05);

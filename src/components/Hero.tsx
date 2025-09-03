@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
-const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
+interface HeroProps {
+  onNavigate: (section: string) => void;
+}
+
+const Hero = ({ onNavigate }: HeroProps) => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -48,7 +48,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-medium"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => onNavigate('projects')}
             >
               View My Work
             </Button>
@@ -56,7 +56,7 @@ const Hero = () => {
               variant="outline" 
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 transition-smooth"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => onNavigate('contact')}
             >
               Get In Touch
             </Button>
@@ -88,12 +88,13 @@ const Hero = () => {
           </div>
         </div>
         
-        <button 
-          onClick={() => scrollToSection('about')}
-          className="animate-bounce p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-smooth"
+        <Button 
+          onClick={() => onNavigate('about')}
+          variant="ghost"
+          className="text-white hover:bg-white/20 transition-smooth"
         >
-          <ArrowDown className="w-6 h-6" />
-        </button>
+          Learn More About Me
+        </Button>
       </div>
     </section>
   );
