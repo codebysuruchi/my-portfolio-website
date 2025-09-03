@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -8,6 +9,24 @@ import Contact from "@/components/Contact";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: 300,
+      scale: 0.8
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1
+    },
+    out: {
+      opacity: 0,
+      x: -300,
+      scale: 0.8
+    }
+  };
 
   const renderSection = () => {
     switch (activeSection) {
@@ -29,8 +48,20 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
-      <div className="pt-20">
-        {renderSection()}
+      <div className="pt-20 overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeSection}
+            initial="initial"
+            animate="in"
+            exit="out"
+            variants={pageVariants}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="min-h-screen"
+          >
+            {renderSection()}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </main>
   );
