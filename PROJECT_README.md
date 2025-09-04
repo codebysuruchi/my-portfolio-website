@@ -174,28 +174,25 @@ CLIENT_URL=http://localhost:8080
 ## 📸 Screenshots of the Application UI
 
 ### Home Section
-![Home Section](./screenshots/home-section.png)
+![Home Section](./screenshots/home.jpg)
 *Hero section with profile image, introduction, and call-to-action buttons*
 
 ### About Section
-![About Section](./screenshots/about-section.png)
+![About Section](./screenshots/about.jpg)
 *Skills showcase with technology cards and personal description*
 
 ### Projects Section
-![Projects Section](./screenshots/projects-section.png)
+![Projects Section](./screenshots/projects.jpg)
 *Portfolio projects with descriptions, technologies used, and live demo links*
 
 ### Experience Section
-![Experience Section](./screenshots/experience-section.png)
+![Experience Section](./screenshots/experience.jpg)
 *Timeline view of work experience and education with download resume option*
 
 ### Contact Section
-![Contact Section](./screenshots/contact-section.png)
+![Contact Section](./screenshots/contact.jpg)
 *Functional contact form with validation and success/error messaging*
 
-### Mobile Responsive View
-![Mobile View](./screenshots/mobile-view.png)
-*Responsive design adaptation for mobile devices*
 
 *Note: Add actual screenshots to a `/screenshots` folder in your repository*
 
