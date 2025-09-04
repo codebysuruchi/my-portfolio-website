@@ -25,7 +25,7 @@ This portfolio website serves as a comprehensive showcase of web development ski
 ## 🔗 GitHub Repository Link
 
 ```
-https://github.com/codebysuruchi/portfolio-website
+https://github.com/codebysuruchi/my-portfolio-website
 ```
 *Replace with your actual GitHub repository URL*
 
