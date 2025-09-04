@@ -27,18 +27,16 @@ This portfolio website serves as a comprehensive showcase of web development ski
 ```
 https://github.com/codebysuruchi/my-portfolio-website
 ```
-*Replace with your actual GitHub repository URL*
 
 ## 🌐 Live Demo Links
 
 ### Frontend Deployment
-- **Vercel**: `https://your-portfolio.vercel.app`
+- **Vercel**: `https://my-portfolio-website-alpha-five.vercel.app/`
 
 ### Backend Deployment
-- **Render**: `https://your-portfolio-api.render.com`
-- **Heroku**: `https://your-portfolio-api.herokuapp.com`
+- **Render**: `https://my-portfolio-website-backend.render.com`
 
-*Note: Replace with your actual deployment URLs*
+
 
 ## 🛠 Technologies Used
 
@@ -131,15 +129,9 @@ CLIENT_URL=http://localhost:8080
 
 ## 🧪 Challenges Faced & Solutions
 
-### Challenge 1: TypeScript to JavaScript Conversion
-**Problem:** Converting a TypeScript codebase to JavaScript while maintaining functionality.
-**Solution:** 
-- Systematically converted all `.ts/.tsx` files to `.js/.jsx`
-- Removed type annotations and interfaces
-- Updated import statements and configuration files
-- Tested all components to ensure functionality remained intact
 
-### Challenge 2: Form Validation & Error Handling
+
+### Challenge 1: Form Validation & Error Handling
 **Problem:** Implementing robust form validation on both client and server sides.
 **Solution:**
 - Added client-side validation using React state management
@@ -147,7 +139,7 @@ CLIENT_URL=http://localhost:8080
 - Created comprehensive error handling with user-friendly messages
 - Added input sanitization to prevent security vulnerabilities
 
-### Challenge 3: Responsive Design Consistency
+### Challenge 2: Responsive Design Consistency
 **Problem:** Ensuring consistent appearance across different devices and screen sizes.
 **Solution:**
 - Used Tailwind CSS's responsive utility classes
@@ -155,7 +147,7 @@ CLIENT_URL=http://localhost:8080
 - Tested on multiple device sizes using browser dev tools
 - Created flexible layouts using CSS Grid and Flexbox
 
-### Challenge 4: Database Integration & CORS Issues
+### Challenge 3: Database Integration & CORS Issues
 **Problem:** Connecting frontend to backend with proper CORS configuration.
 **Solution:**
 - Configured CORS middleware with specific origin settings
@@ -163,7 +155,7 @@ CLIENT_URL=http://localhost:8080
 - Implemented error handling for network requests
 - Added retry logic for failed API calls
 
-### Challenge 5: Image Optimization & Loading
+### Challenge 4: Image Optimization & Loading
 **Problem:** Large image files affecting page load times.
 **Solution:**
 - Optimized images using appropriate formats and sizes
@@ -196,11 +188,6 @@ CLIENT_URL=http://localhost:8080
 
 *Note: Add actual screenshots to a `/screenshots` folder in your repository*
 
-## 🎥 Demo Video Link
-
-**YouTube Demo:** `https://youtu.be/your-demo-video-id`
-
-*Optional: Create a 2-3 minute video showcasing the website features and functionality*
 
 ## 🔧 Feature List
 
