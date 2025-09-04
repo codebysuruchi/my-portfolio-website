@@ -39,9 +39,9 @@ All colors MUST be HSL.
     --ring: 210 85% 40%;
 
     /* Portfolio-specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(330, 85%, 60%), hsl(320, 85%, 65%));
+    --hero-gradient: linear-gradient(135deg, hsl(324, 52%, 61%), hsl(320, 63%, 73%));
     --card-gradient: linear-gradient(145deg, hsl(350, 50%, 98%), hsl(340, 40%, 96%));
-    --accent-gradient: linear-gradient(135deg, hsl(320, 85%, 65%), hsl(330, 85%, 60%));
+    --accent-gradient: linear-gradient(135deg, hsl(313, 71%, 73%), hsl(322, 54%, 61%));
     
     --shadow-soft: 0 4px 6px -1px hsl(220, 15%, 15%, 0.1), 0 2px 4px -1px hsl(220, 15%, 15%, 0.06);
     --shadow-medium: 0 10px 15px -3px hsl(220, 15%, 15%, 0.1), 0 4px 6px -2px hsl(220, 15%, 15%, 0.05);
