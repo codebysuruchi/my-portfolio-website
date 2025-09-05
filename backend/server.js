@@ -15,7 +15,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/portfolio", {
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://suruchijha:ayush21012004@cluster0.0qhefk6.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
