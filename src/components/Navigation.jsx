@@ -27,7 +27,7 @@ const Navigation = ({ activeSection, onSectionChange }) => {
             transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
             className="text-2xl font-bold text-primary font-serif"
           >
-            Suruchi 
+            Suruchi👩‍💻
           </motion.div>
           
           <div className="flex space-x-2">
