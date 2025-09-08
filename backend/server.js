@@ -16,8 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI || "mongodb+srv://suruchijha:ayush21012004@cluster0.0qhefk6.mongodb.net/", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true,
 })
 .then(() => console.log("MongoDB connected successfully"))
 .catch((err) => {
