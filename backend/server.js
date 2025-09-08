@@ -8,14 +8,17 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:8080",
+  origin: [
+  "https://my-portfolio-website-alpha-five.vercel.app",
+  "http://localhost:5000"  // for local development
+],
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://suruchijha:ayush21012004@cluster0.0qhefk6.mongodb.net/", {
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://suruchijha:ayush21012004@cluster0.0qhefk6.mongodb.net/portfolio", {
   // useNewUrlParser: true,
   // useUnifiedTopology: true,
 })
