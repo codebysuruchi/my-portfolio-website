@@ -6,6 +6,13 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+app.use((req, res, next) => {
+  console.log(`Request from origin: ${req.get('origin')}`);
+  console.log(`Request method: ${req.method}`);
+  next();
+});
+
 // Middleware
 app.use(cors({
   origin: [
@@ -13,7 +20,10 @@ app.use(cors({
   "http://localhost:5000" , // for local development
   "http://localhost:5173"   // If using Vite
 ],
-  credentials: true
+  credentials: true,
+  optionsSuccessStatus: 200,   // For legacy browser support
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
+  allowedHeaders: ['Content-Type', 'Authorization']       
 }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
