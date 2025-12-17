@@ -25,7 +25,7 @@ const Navigation = ({ activeSection, onSectionChange }) => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-            className="text-2xl font-bold text-primary font-serif"
+            className="text-sm font-bold text-primary font-serif"
           >
             Suruchi👩‍💻
           </motion.div>

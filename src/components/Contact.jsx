@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.jsx";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card.jsx";
 import { Button } from "@/components/ui/button.jsx";
 import { Input } from "@/components/ui/input.jsx";
 import { Textarea } from "@/components/ui/textarea.jsx";
@@ -9,18 +14,18 @@ import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -30,13 +35,20 @@ const Contact = () => {
 
     try {
       // Send data to backend API
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://suruchi-portfolio-website-0.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          }),
+        }
+      );
 
       const data = await response.json();
 
@@ -45,15 +57,15 @@ const Contact = () => {
           title: "Message sent successfully!",
           description: data.message,
         });
-        
+
         // Reset form
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: "", email: "", message: "" });
       } else {
         // Handle validation errors from backend
         if (data.errors) {
           toast({
             title: "Validation Error",
-            description: data.errors.join(', '),
+            description: data.errors.join(", "),
             variant: "destructive",
           });
         } else {
@@ -65,10 +77,11 @@ const Contact = () => {
         }
       }
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error("Error sending message:", error);
       toast({
         title: "Network Error",
-        description: "Unable to connect to server. Please check your internet connection and try again.",
+        description:
+          "Unable to connect to server. Please check your internet connection and try again.",
         variant: "destructive",
       });
     } finally {
@@ -81,20 +94,20 @@ const Contact = () => {
       icon: Mail,
       label: "Email",
       value: "suruchijha798@gmail.com",
-      href: "mailto:john.smith@email.com"
+      href: "mailto:john.smith@email.com",
     },
     {
       icon: Phone,
       label: "Phone",
       value: "+91 *********",
-      href: "tel:"
+      href: "tel:",
     },
     {
       icon: MapPin,
       label: "Location",
       value: "Madanpur, Bhubaneshwar",
-      href: "#"
-    }
+      href: "#",
+    },
   ];
 
   return (
@@ -104,11 +117,11 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
           <div className="w-20 h-1 bg-accent-gradient mx-auto mb-8 rounded-full"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Have a project in mind or want to collaborate? I'd love to hear from you. 
-            Let's discuss how we can bring your ideas to life.
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you. Let's discuss how we can bring your ideas to life.
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="bg-card-gradient shadow-soft border-border/50">
@@ -135,9 +148,12 @@ const Contact = () => {
                     placeholder="Enter your full name"
                   />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-foreground font-medium">
+                  <Label
+                    htmlFor="email"
+                    className="text-foreground font-medium"
+                  >
                     Email Address *
                   </Label>
                   <Input
@@ -151,9 +167,12 @@ const Contact = () => {
                     placeholder="Enter your email address"
                   />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-foreground font-medium">
+                  <Label
+                    htmlFor="message"
+                    className="text-foreground font-medium"
+                  >
                     Message *
                   </Label>
                   <Textarea
@@ -167,9 +186,9 @@ const Contact = () => {
                     placeholder="Tell me about your project or say hello..."
                   />
                 </div>
-                
-                <Button 
-                  type="submit" 
+
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-primary hover:bg-primary/90 transition-colors shadow-medium"
                 >
@@ -188,7 +207,7 @@ const Contact = () => {
               </form>
             </CardContent>
           </Card>
-          
+
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -196,17 +215,21 @@ const Contact = () => {
                 Let's Connect
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, creative projects, 
-                or potential collaborations. Whether you have a question about my work 
-                or just want to say hello, feel free to reach out!
+                I'm always open to discussing new opportunities, creative
+                projects, or potential collaborations. Whether you have a
+                question about my work or just want to say hello, feel free to
+                reach out!
               </p>
             </div>
-            
+
             <div className="space-y-6">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
-                  <Card key={index} className="bg-card-gradient shadow-soft border-border/50">
+                  <Card
+                    key={index}
+                    className="bg-card-gradient shadow-soft border-border/50"
+                  >
                     <CardContent className="p-6">
                       <div className="flex items-center">
                         <div className="p-3 rounded-lg bg-primary/10 mr-4">
@@ -221,7 +244,7 @@ const Contact = () => {
                               {info.value}
                             </div>
                           ) : (
-                            <a 
+                            <a
                               href={info.href}
                               className="font-medium text-primary hover:text-primary/80 transition-colors"
                             >
@@ -235,15 +258,15 @@ const Contact = () => {
                 );
               })}
             </div>
-            
+
             <Card className="bg-accent-gradient p-6 text-white shadow-medium">
               <div className="flex items-start">
                 <CheckCircle className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold mb-2">Quick Response</h4>
                   <p className="text-white/90 text-sm leading-relaxed">
-                    I typically respond to all inquiries within 24 hours. 
-                    For urgent matters, feel free to call or text me directly.
+                    I typically respond to all inquiries within 24 hours. For
+                    urgent matters, feel free to call or text me directly.
                   </p>
                 </div>
               </div>

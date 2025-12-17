@@ -34,7 +34,7 @@ https://github.com/codebysuruchi/my-portfolio-website
 - **Vercel**: `https://my-portfolio-website-alpha-five.vercel.app/`
 
 ### Backend Deployment
-- **Render**: `https://my-portfolio-website-backend.render.com`
+- **Render**: `https://suruchi-portfolio-website-0.onrender.com/api/health`
 
 
 
@@ -78,7 +78,7 @@ https://github.com/codebysuruchi/my-portfolio-website
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/portfolio-website.git
+git clone https://github.com/codebysuruchi/my-portfolio-website
 cd portfolio-website
 ```
 
@@ -107,14 +107,10 @@ Backend will run on `http://localhost:5000`
 
 ### Step 4: Database Setup
 
-**Option A: Local MongoDB**
-```bash
-# Install and start MongoDB locally
-mongod
-```
 
-**Option B: MongoDB Atlas**
-1. Create account at [MongoDB Atlas](https://www.mongodb.com/atlas)
+
+**step: MongoDB Atlas**
+1. Create account at [MongoDB Atlas]
 2. Create new cluster
 3. Get connection string
 4. Update `MONGO_URI` in `backend/.env`
@@ -184,6 +180,9 @@ CLIENT_URL=http://localhost:8080
 ### Contact Section
 ![Contact Section](./screenshots/contact.jpg)
 *Functional contact form with validation and success/error messaging*
+
+### DB entry or API response
+![Database Entry](./screenshots/Db_entry.jpg.png)
 
 
 *Note: Add actual screenshots to a `/screenshots` folder in your repository*

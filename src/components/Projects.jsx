@@ -26,7 +26,7 @@ const Projects = () => {
       description: "For the best experience, view this site at 75% zoom. This is my first project, so please excuse any mistakes—I'm still learning!",
       image: "https://www.wlns.com/wp-content/uploads/sites/50/2023/07/64bf1043ee0a44.40675335.jpeg?w=2560&h=1440&crop=1",
       technologies:["React js","TailwindCSS", "Express"],
-      demoLink: "https://weather.example.com",
+      demoLink: "https://x-clone-rho-gilt.vercel.app/",
       githubLink: "https://github.com/codebysuruchi/X-clone"
     },
   ];
