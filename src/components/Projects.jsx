@@ -6,10 +6,18 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Get Me a Coffee 🍵",
+      description: "This project is a crowd funding website inspired by platforms like Patreon . It allows creators to register, set up their own fundraising page, and receive donations from their fans or supporters. Users can make contributions by entering a name, message, and amount, and the site integrates payment options like Razorpay for secure transactions.",
+      image: "/getMeaCoffee.png",
+      technologies: ["Next.js", "Node.js", "MongoDb" ,"tailwindCSS"],
+      demoLink: "https://get-me-a-coffee-52wb.vercel.app/",
+      githubLink: "https://github.com/codebysuruchi/Get-me-a-coffee"
+    },
+    {
       title: "Password Manager App",
       description: "This project is a fully functional password manager application built from the ground up using React for the user interface, Tailwind CSS for styling, and browser local storage for data persistence.",
       image: "https://techlapse.com/images/blog/meta/best-password-managers-of-2023.png",
-      technologies: ["React", "Node.js", "tailwindCSS"],
+      technologies: ["React.js", "Node.js", "tailwindCSS"],
       demoLink: "https://password-manager-ten-alpha.vercel.app/",
       githubLink: "https://github.com/codebysuruchi/Password-manager"
     },
@@ -17,7 +25,7 @@ const Projects = () => {
       title: "To Do List App",
       description: "A sleek and responsive To-Do List application built using React and Tailwind CSS. This project helps users manage daily tasks.",
       image: "https://cdn.vectorstock.com/i/1000v/29/71/to-do-list-word-concepts-banner-task-prioritizing-vector-39922971.jpg",
-      technologies: ["React js","TailwindCSS", "Express"],
+      technologies: ["React.js","TailwindCSS", "Express"],
       demoLink: "https://simple-todo-list-indol.vercel.app/",
       githubLink: "https://github.com/codebysuruchi/Todo-list-Project"
     },
@@ -25,7 +33,7 @@ const Projects = () => {
       title: "X Clone",
       description: "For the best experience, view this site at 75% zoom. This is my first project, so please excuse any mistakes—I'm still learning!",
       image: "https://www.wlns.com/wp-content/uploads/sites/50/2023/07/64bf1043ee0a44.40675335.jpeg?w=2560&h=1440&crop=1",
-      technologies:["React js","TailwindCSS", "Express"],
+      technologies:["React.js","TailwindCSS", "Express"],
       demoLink: "https://x-clone-rho-gilt.vercel.app/",
       githubLink: "https://github.com/codebysuruchi/X-clone"
     },
