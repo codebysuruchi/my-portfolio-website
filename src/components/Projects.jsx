@@ -35,7 +35,7 @@ const Projects = () => {
       image: "https://www.wlns.com/wp-content/uploads/sites/50/2023/07/64bf1043ee0a44.40675335.jpeg?w=2560&h=1440&crop=1",
       technologies:["React.js","TailwindCSS", "Express"],
       demoLink: "https://x-clone-rho-gilt.vercel.app/",
-      // githubLink: "https://github.com/codebysuruchi/X-clone"
+      githubLink: "https://github.com/codebysuruchi/X-clone"
     },
   ];
 
