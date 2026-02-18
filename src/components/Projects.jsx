@@ -6,6 +6,14 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "AI Trip Planner",
+      description: "AI Trip Planner is a full-stack web application that helps users plan trips effortlessly by generating customized travel itineraries using generative AI.",
+      image: "/AiTripPlanner.png",
+      technologies: ["React.js", "Node.js", "Firebase" ,"TailwindCSS","Gemini AI"],
+      demoLink: "https://ai-trip-planner-beige-two.vercel.app/",
+      githubLink: "https://github.com/codebysuruchi/Ai-trip-Planner"
+    },
+    {
       title: "Get Me a Coffee 🍵",
       description: "This project is a crowd funding website inspired by platforms like Patreon . It allows creators to register, set up their own fundraising page, and receive donations from their fans or supporters. Users can make contributions by entering a name, message, and amount, and the site integrates payment options like Razorpay for secure transactions.",
       image: "/getMeaCoffee.png",
