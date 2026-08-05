@@ -13,18 +13,42 @@ app.use((req, res, next) => {
   next();
 });
 
-// Middleware
-app.use(cors({
-  origin: [
+// // Middleware
+// app.use(cors({
+//   origin: [
+//   "https://my-portfolio-website-alpha-five.vercel.app",
+//   "http://localhost:5000" , // for local development
+//   "http://localhost:8080"   // If using Vite
+// ],
+//   credentials: true,
+//   optionsSuccessStatus: 200,   // For legacy browser support
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
+//   allowedHeaders: ['Content-Type', 'Authorization']       
+// }));
+
+const allowedOrigins = [
+  "http://localhost:8080",
+  "http://localhost:5000",
   "https://my-portfolio-website-alpha-five.vercel.app",
-  "http://localhost:5000" , // for local development
-  "http://localhost:5173"   // If using Vite
-],
-  credentials: true,
-  optionsSuccessStatus: 200,   // For legacy browser support
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
-  allowedHeaders: ['Content-Type', 'Authorization']       
-}));
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests from Postman or server-to-server requests
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    optionsSuccessStatus: 200,
+  })
+);
 
 app.options('/*path', (req, res) => {
   res.header('Access-Control-Allow-Origin', 'https://my-portfolio-website-alpha-five.vercel.app');
@@ -174,6 +198,7 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -181,7 +206,16 @@ app.use((err, req, res, next) => {
 });
 
 
-
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Portfolio Backend API is running 🚀",
+    endpoints: {
+      health: "/api/health",
+      contact: "/api/contact"
+    }
+  });
+});
 // 404 handler
 app.use((req, res) => {
   res.status(404).json({ success: false, message: 'Route not found' });

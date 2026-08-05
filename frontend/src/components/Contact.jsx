@@ -36,7 +36,7 @@ const Contact = () => {
     try {
       // Send data to backend API
       const response = await fetch(
-        "https://suruchi-portfolio-website-0.onrender.com/api/contact",
+        "https://my-portfolio-website-99gs.vercel.app/api/contact",
         {
           method: "POST",
           headers: {
@@ -94,7 +94,7 @@ const Contact = () => {
       icon: Mail,
       label: "Email",
       value: "suruchijha798@gmail.com",
-      href: "mailto:john.smith@email.com",
+      href: "mailto:suruchijha798@gmail.com",
     },
     {
       icon: Phone,
