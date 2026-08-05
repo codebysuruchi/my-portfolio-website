@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === 'production') {
    }
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://suruchijha:ayush21012004@cluster0.0qhefk6.mongodb.net/portfolio", {
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://<db_username>:wWawbbTwa3OeOzge@cluster0.rw9gsh3.mongodb.net/portfolio", {
   // useNewUrlParser: true,
   // useUnifiedTopology: true,
 })
