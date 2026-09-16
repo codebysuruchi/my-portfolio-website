@@ -6,6 +6,23 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Rehive",
+      description: "Buy what you need. Sell what you don't. Share what you know. From notes and books to electronics, furniture, and services — REHIVE helps your community make better use of what they already have",
+      image: "/rehive.png",
+      technologies: ["Next.js", "Node.js","Docker", "Redis","Ngnix" , "TailwindCSS", "MongoDB", "Express.js"],
+      demoLink: "https://rehive-delta.vercel.app/",
+      githubLink: "https://github.com/codebysuruchi/Rehive"
+    },
+    {
+      title: "LocalKart",
+      description: "LocalKart is a production-grade hyperlocal grocery and fresh vegetable delivery platform built to digitally empower local vegetable vendors, neighbourhood kirana stores, customers, and vendor-owned delivery agents. Unlike centralized quick-commerce warehouses, LocalKart prioritizes fresh morning farm harvests, nearby small business empowerment, multilingual support (English, Hindi, Odia), and high-availability horizontal scaling.",
+      image: "/localkart.png",
+      technologies: ["React.js", "Node.js", "Docker", "Redis", "Ngnix", "TailwindCSS", "MongoDB", "Express.js"],
+      demoLink: "https://local-kart-lime.vercel.app/",
+      githubLink: "https://github.com/suruchi-thryvoo10/LocalKart"
+    },
+    
+    {
       title: "AI Trip Planner",
       description: "AI Trip Planner is a full-stack web application that helps users plan trips effortlessly by generating customized travel itineraries using generative AI.",
       image: "/AiTripPlanner.png",
@@ -13,6 +30,7 @@ const Projects = () => {
       demoLink: "https://ai-trip-planner-beige-two.vercel.app/",
       githubLink: "https://github.com/codebysuruchi/Ai-trip-Planner"
     },
+    
     {
       title: "Get Me a Coffee 🍵",
       description: "This project is a crowd funding website inspired by platforms like Patreon . It allows creators to register, set up their own fundraising page, and receive donations from their fans or supporters. Users can make contributions by entering a name, message, and amount, and the site integrates payment options like Razorpay for secure transactions.",
