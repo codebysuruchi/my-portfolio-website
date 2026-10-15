@@ -42,7 +42,7 @@ const Projects = () => {
     {
       title: "Password Manager App",
       description: "This project is a fully functional password manager application built from the ground up using React for the user interface, Tailwind CSS for styling, and browser local storage for data persistence.",
-      image: "https://techlapse.com/images/blog/meta/best-password-managers-of-2023.png",
+      image: "https://techlapse.com/images/blog/meta/best-password-managers-of-2023.png",    
       technologies: ["React.js", "Node.js", "tailwindCSS"],
       demoLink: "https://password-manager-ten-alpha.vercel.app/",
       githubLink: "https://github.com/codebysuruchi/Password-manager"
